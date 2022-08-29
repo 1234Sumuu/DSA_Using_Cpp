@@ -10,13 +10,20 @@ int main()
     {
         cin >> a[i];
     }
-    int largest = min_element;
+    int largest = INT_MIN;
+    int smallest = INT_MAX;
+
     for (int i = 0; i < n; i++)
     {
         if (a[i] > largest)
         {
             largest = a[i];
         }
+        if (a[i] < smallest)
+        {
+            smallest = a[i];
+        }
     }
     cout << "The largest element: " << largest << endl;
+    cout << "The smallest element: " << smallest << endl;
 }
